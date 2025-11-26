@@ -74,41 +74,40 @@ export default function ArticleSlider({ articles = articlesData }: ArticleSlider
 
     return (
         <section 
-            id="articles" 
-            style={{
-                position: 'relative',
-                width: '100%',
-                overflow: 'hidden',
-                backgroundColor: '#1B5E20'
-            }}
-        >
-            {/* 背景圖片 */}
-            <div style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                zIndex: 0
-            }}>
-                <img 
-                    src="/asbg.jpg" 
-                    alt="Background"
-                    style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                        objectPosition: 'center'
-                    }}
-                />
-                <div style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    background: 'linear-gradient(135deg, rgba(27, 94, 32, 0.85), rgba(46, 125, 50, 0.1))'
-                }}></div>
+    id="articles"
+    style={{
+        position: 'relative',
+        width: '100%',
+        overflow: 'hidden',
+        backgroundImage: 'url("/asbg.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',  // ★ 讓背景定住
+    }}
+>
+    {/* 背景遮罩 */}
+    <div
+        style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            background: 'linear-gradient(135deg, rgba(27, 94, 32, 0.85), rgba(46, 125, 50, 0.1))',
+            zIndex: 0,
+        }}
+    />
+
+    {/* 內容區域 */}
+    <div
+        style={{
+            position: 'relative',
+            zIndex: 1,
+            maxWidth: '1400px',
+            margin: '0 auto',
+            padding: '100px 24px 120px',
+        }}
+    >
             </div>
 
             {/* 內容區域 */}
