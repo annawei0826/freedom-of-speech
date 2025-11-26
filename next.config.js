@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  basePath: '/freedom-of-speech',
-  assetPrefix: '/freedom-of-speech',
+  // ⚠️ 不要使用 output: export
+  // ⚠️ 不要使用 basePath
+  // ⚠️ 不要使用 assetPrefix
 };
 
 module.exports = nextConfig;
