@@ -1,0 +1,358 @@
+{
+    "menu": [
+        {
+            "name": "論壇介紹",
+            "link": "#sec1"
+        },
+        {
+            "name": "講者陣容",
+            "link": "#sec2"
+        },
+        {
+            "name": "活動議程",
+            "link": "#sec3"
+        },
+        {
+            "name": "立即報名",
+            "link": "#sec4"
+        },
+        {
+            "name": "交通資訊",
+            "link": "#sec5"
+        },
+        {
+            "name": "延伸閱讀",
+            "link": "#sec6"
+        }
+    ],
+    "content": [
+        {
+            "title": "論壇介紹",
+            "desc": "在利率震盪與市場多變的新常態下,投資策略即將迎來重大轉向。<br>主動式債券ETF結合靈活調整與主動選債優勢,正快速成為全球市場新寵,<br>債券ETF的黃金新時代全面啟動。 本論壇邀集投信專家、ETF實戰操盤手、券商與理財達人,<br>共同解析主動式債券ETF的全球趨勢、實戰優勢與未來潛力。<br>從川普政策下的債券投資新藍圖,到主動策略如何助攻資產配置與財務自由,<br>為您揭開下一波投資風口。"
+        },
+        {
+            "title": "講者陣容"
+        },
+        {
+            "title": "活動議程",
+            "topics": [
+                {
+                    "title": "顛覆被動 全球主動式ETF熱潮來襲",
+                    "desc": "市場高波動成為投資的新常態,投資人不再滿足於單純追蹤指數的被動策略,主動式ETF以更靈活的資產配置與主動選債(股)策略崛起,成為全球資本市場的焦點。本場演講將帶您掌握主動ETF在全球、美國的發展趨勢與關鍵轉折,解析其與傳統ETF的差異與優勢,並搶先預覽台灣市場即將引爆的主動浪潮。",
+                    "isOpen": false
+                },
+                {
+                    "title": "利率轉折年 川普下的債市投資新藍圖",
+                    "desc": "2025年全球地緣風險攀升,美國帶來新的貿易與財政政策衝擊。在這個利率可能見頂的關鍵轉折年,債券市場正醞釀新一波機會與風險重定價。本場演講將深度剖析川普政策可能帶來的通膨、利率與債市影響,並提出投資等級債與主動管理策略的實戰建議,協助投資人在變局中精準佈局。",
+                    "isOpen": false
+                },
+                {
+                    "title": "啟動債券ETF革命 主動時代正式來臨",
+                    "desc": "作為全球資產管理先驅,聯博即將推出台灣首檔主動債券ETF,導入聯博全球研究實力並結合AI選債機制,翻轉市場對債券投資的既有印象。本場演講將由美國公司債市場的投資契機與風險出發,解密如何透過主動管理的投資策略掌握債券市場機會,以及如何保持彈性,因應各種不同的市況挑戰,迎接主動ETF元年。",
+                    "isOpen": false
+                },
+                {
+                    "title": "<div>[台北場]<br>投資不必很厲害,ETF也能讓生活自在慢活</div>",
+                    "desc": "投資,不只是數字與報酬的競賽,更是通往理想生活方式的工具。該如何透過專業主動管理與資產配置,讓投資不必再時時盯盤,擁抱長期投資的懷抱。本場演講邀請財經媒體專家,以生活視角出發,分享如何善用主動投資,達到「投資聰明化」、「生活慢活化」,實現財務自主的生活哲學。",
+                    "isOpen": false
+                },
+                {
+                    "title": "<div>[台中場／高雄場]<br>資產配置全面進化 打造你的主動式投資</div>",
+                    "desc": "市場變化莫測,傳統資產配置邏輯正快速改寫,主動式投資策略以靈活應變、動態調整優勢脫穎而出。本場演講將從個人投資者的角度切入,解析如何善用主動式ETF掌握市場轉折、分散風險、穩健創造報酬。同時也將分享財經專家對投資習慣改變的觀察,協助您打造更有彈性與自主性的資產配置藍圖,讓投資不再只是跟隨市場,而是由你主導未來。",
+                    "isOpen": false
+                }
+            ],
+            "cities": [
+                {
+                    "titleImg": "agenda_remark_taichung.png",
+                    "schedule": [
+                        {
+                            "time": "13:30-14:00",
+                            "content": "來賓報到",
+                            "isOrange": false
+                        },
+                        {
+                            "time": "14:00-14:05",
+                            "content": "主持人開場 / 長官致詞<br><span>聯博投信 董事長 翁振國</span>",
+                            "isOrange": false
+                        },
+                        {
+                            "time": "14:05-14:10",
+                            "content": "貴賓致詞<br><span>今周刊 副社長 楊紹華</span>",
+                            "isOrange": false
+                        },
+                        {
+                            "time": "14:10-14:15",
+                            "content": "大合影",
+                            "isOrange": false
+                        },
+                        {
+                            "time": "14:15-14:35",
+                            "content": "專題演講一<br>顛覆被動 全球主動式ETF熱潮來襲<br><span>聯博投信ETF發展部 副總經理 鍾郁婕</span>",
+                            "isOrange": true
+                        },
+                        {
+                            "time": "14:35-14:55",
+                            "content": "專題演講二<br>利率轉折年 川普下的債市投資新藍圖<br><span>總體經濟學家 吳嘉隆</span>",
+                            "isOrange": true
+                        },
+                        {
+                            "time": "14:55-15:15",
+                            "content": "專題演講三<br>啟動債券ETF革命 主動時代正式來臨<br><span>聯博投信 固定收益資深投資策略師 江常維</span>",
+                            "isOrange": true
+                        },
+                        {
+                            "time": "15:15-15:35",
+                            "content": "專題演講四<br>資產配置全面進化,打造你的主動式投資<br><span>理財達人 股魚</span>",
+                            "isOrange": true
+                        },
+                        {
+                            "time": "15:35-15:40",
+                            "content": "中場休息",
+                            "isOrange": false
+                        },
+                        {
+                            "time": "15:40-16:00",
+                            "content": "焦點對談<br>引領ETF未來十年的關鍵對談<br><span>・主持人</span><br><span>今周刊 副社長 楊紹華</span><br><span>・與談人</span><br><span>聯博投信ETF發展部 副總經理 鍾郁婕</span><br><span>總體經濟學家 吳嘉隆</span><br><span>聯博投信 固定收益資深投資策略師 江常維</span><br><span>理財達人 股魚</span><br><span>凱基證券財富管理處主管 阮建銘</span>",
+                            "isOrange": true
+                        },
+                        {
+                            "time": "16:00",
+                            "content": "圓滿賦歸",
+                            "isOrange": false
+                        }
+                    ]
+                },
+                                {
+                    "titleImg": "agenda_remark_taipei.png",
+                    "schedule": [
+                        {
+                            "time": "18:00-19:00",
+                            "content": "來賓報到",
+                            "isOrange": false
+                        },
+                        {
+                            "time": "19:00-19:05",
+                            "content": "主持人開場 / 長官致詞<br><span>聯博投信 董事長 翁振國</span>",
+                            "isOrange": false
+                        },
+                        {
+                            "time": "19:05-19:10",
+                            "content": "貴賓致詞<br><span>今周刊 發行人 梁永煌</span>",
+                            "isOrange": false
+                        },
+                        {
+                            "time": "19:10-19:15",
+                            "content": "大合影",
+                            "isOrange": false
+                        },
+                        {
+                            "time": "19:15-19:35",
+                            "content": "專題演講一<br>顛覆被動 全球主動式ETF熱潮來襲<br><span>聯博投信ETF發展部 副總經理 鍾郁婕</span>",
+                            "isOrange": true
+                        },
+                        {
+                            "time": "19:35-19:55",
+                            "content": "專題演講二<br>利率轉折年 川普下的債市投資新藍圖<br><span>今周刊 董事長 謝金河</span>",
+                            "isOrange": true
+                        },
+                        {
+                            "time": "19:55-20:15",
+                            "content": "專題演講三<br>啟動債券ETF革命 主動時代正式來臨<br><span>聯博投信 固定收益資深投資策略師 江常維</span>",
+                            "isOrange": true
+                        },
+                        {
+                            "time": "20:15-20:35",
+                            "content": "專題演講四<br>投資不必很厲害,ETF也能讓生活自在慢活<br><span>資深媒體人 陳斐娟</span>",
+                            "isOrange": true
+                        },
+                        {
+                            "time": "20:35-20:40",
+                            "content": "中場休息",
+                            "isOrange": false
+                        },
+                        {
+                            "time": "20:40-21:00",
+                            "content": "焦點對談<br>引領ETF未來十年的關鍵對談<br><span>・主持人</span><br><span>今周刊 副社長 楊紹華</span><br><span>・與談人</span><br><span>聯博投信ETF發展部 副總經理 鍾郁婕</span><br><span>聯博投信 固定收益資深投資策略師 江常維</span><br><span>資深媒體人 陳斐娟</span><br><span>凱基證券財富管理處主管 阮建銘</span>",
+                            "isOrange": true
+                        },
+                        {
+                            "time": "21:00",
+                            "content": "圓滿賦歸",
+                            "isOrange": false
+                        }
+                    ]
+                },
+                {
+                    "titleImg": "agenda_remark_kaohsiung.png",
+                    "schedule": [
+                        {
+                            "time": "13:30-14:00",
+                            "content": "來賓報到",
+                            "isOrange": false
+                        },
+                        {
+                            "time": "14:00-14:05",
+                            "content": "主持人開場 / 長官致詞<br><span>聯博投信 董事長 翁振國</span>",
+                            "isOrange": false
+                        },
+                        {
+                            "time": "14:05-14:10",
+                            "content": "貴賓致詞<br><span>今周刊 副社長 楊紹華</span>",
+                            "isOrange": false
+                        },
+                        {
+                            "time": "14:10-14:15",
+                            "content": "大合影",
+                            "isOrange": false
+                        },
+                        {
+                            "time": "14:15-14:35",
+                            "content": "專題演講一<br>顛覆被動 全球主動式ETF熱潮來襲<br><span>聯博投信ETF發展部 副總經理 鍾郁婕</span>",
+                            "isOrange": true
+                        },
+                        {
+                            "time": "14:35-14:55",
+                            "content": "專題演講二<br>利率轉折年 川普下的債市投資新藍圖<br><span>總體經濟學家 吳嘉隆</span>",
+                            "isOrange": true
+                        },
+                        {
+                            "time": "14:55-15:15",
+                            "content": "專題演講三<br>啟動債券ETF革命 主動時代正式來臨<br><span>聯博投信 固定收益資深投資策略師 江常維</span>",
+                            "isOrange": true
+                        },
+                        {
+                            "time": "15:15-15:35",
+                            "content": "專題演講四<br>資產配置全面進化,打造你的主動式投資<br><span>理財達人 股魚</span>",
+                            "isOrange": true
+                        },
+                        {
+                            "time": "15:35-15:40",
+                            "content": "中場休息",
+                            "isOrange": false
+                        },
+                        {
+                            "time": "15:40-16:00",
+                            "content": "焦點對談<br>引領ETF未來十年的關鍵對談<br><span>・主持人</span><br><span>今周刊 副社長 楊紹華</span><br><span>・與談人</span><br><span>聯博投信ETF發展部 副總經理 鍾郁婕</span><br><span>總體經濟學家 吳嘉隆</span><br><span>聯博投信 固定收益資深投資策略師 江常維</span><br><span>理財達人 股魚</span><br><span>凱基證券財富管理處主管 阮建銘</span>",
+                            "isOrange": true
+                        },
+                        {
+                            "time": "16:00",
+                            "content": "圓滿賦歸",
+                            "isOrange": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "立即報名"
+        },
+        {
+            "title": "交通資訊",
+            "venues": [
+                {
+                    "name": "台北國際會議中心(TICC)",
+                    "addressImage": "address.png",
+                    "address": "台北市信義路五段1號",
+                    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.0165585592185!2d121.5560203871211!3d25.033512120618862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb61ab3d33f%3A0xab0d0f7ac395bff4!2z5Y-w5YyX5ZyL6Zqb5pyD6K2w5Lit5b-DKFRJQ0Mp!5e0!3m2!1szh-TW!2stw!4v1749436260748!5m2!1szh-TW!2stw",
+                    "transportation": [
+                        {
+                            "type": "自行開車",
+                            "icon": "drive_icon.png",
+                            "description": "國際會議中心地址：台北市信義路五段1號<br>台北車站出發<br>走台北市東西向快速道路/市民大道/市民大道高架道路→前往大安區→光復南路出口下交流道→行駛光復南路→開往信義區基隆路一段→走市府路開往信義路五段→停車"
+                        },
+                        {
+                            "type": "捷運",
+                            "icon": "metro_icon.png",
+                            "description": "淡水信義線台北101/世貿站 1號出口,步行約1分鐘即可抵達"
+                        },
+                        {
+                            "type": "公車",
+                            "icon": "bus_icon.png",
+                            "description": "20、37、284、284直、611、650、935、1032、1503、1551、1552、2025、9001、9009、南軟通勤雙和線、20、22、33、226、承德幹線、288、288區、292、797、1503、信義幹線、28、281、537、647、915、棕6、棕7、棕18、棕21、綠1、207、797、信義幹線、信義新幹線、藍5、藍5區"
+                        }
+                    ]
+                },
+                {
+                    "name": "台中李方艾美酒店",
+                    "addressImage": "address2.png",
+                    "address": "台中市中區建國路126號",
+                    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.998119562081!2d120.68078167617514!3d24.13670417840883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d36f10ace5f%3A0x6ab3fd4d4bbdae85!2z5Y-w5Lit5p2O5pa56Im-576O6YWS5bqX!5e0!3m2!1szh-TW!2stw!4v1750238143109!5m2!1szh-TW!2stw",
+                    "transportation": [
+                        {
+                            "type": "高鐵轉乘",
+                            "icon": "train_icon.png",
+                            "description": "距離酒店約：8.1公里,開車約15分鐘<br>1. 轉乘火車：抵達台中高鐵站→ 出口 3 台鐵車站→抵達台鐵新烏日站→北上方向(第二月台)→抵達台中火車站→ 5.6 出口 台灣大道(舊站)、建國路→出站後沿建國路步行350公尺(約5分鐘)至左前方的圓弧玻璃帷幕大樓→抵達台中李方艾美酒店<br>2. 轉乘公車：抵達台中高鐵站→ 出口 5.6 客運轉運站→搭乘 158號 或 37號→於台中車站(台灣大道)下車→下車後後沿建國路步行350公尺(約5分鐘)→抵達台中李方艾美酒店"
+                        },
+                        {
+                            "type": "火車",
+                            "icon": "metro_icon.png",
+                            "description": "距離酒店約：0.4公里,步行約5分鐘<br>抵達台中火車站→ 5.6 出口 台灣大道(舊站)、建國路→出站後沿建國路步行350公尺(約5分鐘)至左前方的圓弧玻璃帷幕大樓→抵達台中李方艾美酒店"
+                        }
+                    ]
+                },
+                {
+                    "name": "高雄國際會議中心",
+                    "addressImage": "address3.png",
+                    "address": "高雄市鼓山區成功一路222號",
+                    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.9646071612005!2d120.30377807613955!3d22.655108179433054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e04fcfe16f77f%3A0xa9ffdbc294e10301!2zODA06auY6ZuE5biC6byT5bGx5Y2A6b6N5b635paw6LevMjIy6Jmf!5e0!3m2!1szh-TW!2stw!4v1750238247955!5m2!1szh-TW!2stw",
+                    "transportation": [
+                        {
+                            "type": "高鐵轉乘",
+                            "icon": "train_icon.png",
+                            "description": "從左營高鐵出發<br>捷運<br>搭乘紅線至R13凹仔底站,從2號出口步行約8分鐘<br>計程車<br>由高鐵左營站乘車約15分鐘。"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "延伸閱讀",
+            "articles": [
+                {
+                    "title": "台灣資本市場里程碑：主動式ETF掛牌，投資人布局關鍵指引",
+                    "desc": "台灣資本市場新時代來臨！台股是全球今年表現最突出的市場之一，值此同時，台灣正式開放主動式ETF掛牌，這種投資工具有什麼特點？為何被主管機關如此重視，甚至認為是重要政策之舉？今周刊於6月11日舉辦2025年「主動式ETF崛起-兆元級新契機」論壇，邀集金管會、證交所、櫃買中心和眾多資產管理業者開講，吸引滿場聽眾參加。",
+                    "link": "https://www.businesstoday.com.tw/article/category/183013/post/202506130006/?utm_source=businesstoday&utm_medium=search&utm_campaign=article",
+                    "img": "article1.png"
+                },
+                {
+                    "title": "主動式ETF崛起創出「兆元級」契機！彭金隆：全球複合成長率逾40%，兩大優勢滿足投資人風險偏好",
+                    "desc": "「只要我們想，只要我們開始做，就會有成果！」儘管美國總統川普提出對等關稅議題，震撼全球金融市場，台股仍然在其中表現突出，為亞洲資本市場的佼佼者。",
+                    "link": "https://www.businesstoday.com.tw/article/category/183013/post/202506120035/?utm_source=businesstoday&utm_medium=search&utm_campaign=article",
+                    "img": "article2.png"
+                },
+                {
+                    "title": "主動式ETF來了！比傳統ETF更猛，管理費比你熟悉的基金更便宜，中小型股恐震盪加劇...效應全解讀",
+                    "desc": "「我們很努力地研究、選股、盯盤操作，好不容易才讓基金績效『打敗大盤』，但拿到手的獎金，卻比『複製大盤』的經理人還少……。」一位台股基金經理人愈說愈急。",
+                    "link": "https://www.businesstoday.com.tw/article/category/183012/post/202502190017/?utm_source=businesstoday&utm_medium=search&utm_campaign=article",
+                    "img": "article3.png"
+                },
+                {
+                    "title": "比傳統ETF更猛，管理費比你熟悉的基金更便宜，美國投資人瘋搶的理財新工具… 大標：主動式ETF來了！",
+                    "desc": "主動式基金經理人正在摩拳擦掌，要與被動式ETF一較高下，外商投信公司正在集結資源，要在國內基金市場重返榮耀",
+                    "link": "https://www.businesstoday.com.tw/article/category/183013/post/202502190003/?utm_source=businesstoday&utm_medium=search&utm_campaign=article",
+                    "img": "article4.png"
+                }
+            ]
+        }
+    ],
+    "footer": {
+        "organizer": {
+            "title": "主辦單位:",
+            "logo": "logo.png"
+        },
+        "sponsor": {
+            "title": "贊助單位:",
+            "logo": "logo2.png"
+        },
+        "service": {
+            "phone": "服務電話 (02)2581-6196 #636",
+            "hours": "服務時間 週一至五 09:00~17:30 例假日除外"
+        },
+        "copyright": [
+            "今周文化事業(股)公司 / 今周行銷(股)公司 / 今周出版(股)公司 版權所有 本網站圖文非經本社同意不得刊載",
+            "Copyright © 2025 Business Today All rights reserved."
+        ]
+    }
+}
