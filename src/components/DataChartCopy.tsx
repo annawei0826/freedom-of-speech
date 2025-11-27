@@ -22,7 +22,7 @@ const mapNameToJsonName: { [key: string]: string } = {
     "Italy": "Italy", "Mauritania": "Mauritania", "Mauritius": "Mauritius", "Ghana": "Ghana",
     "Panama": "Panama", "Liberia": "Liberia", "Romania": "Romania", "Sierra Leone": "Sierra Leone",
     "United States": "United States", "United States of America": "United States", "Gambia": "Gambia",
-    "Uruguay": "Uruguay", "Croatia": "Croatia", "South Korea": "South Korea", "Ukraine": "Ukraine",
+    "Uruguay": "Uruguay", "Croatia": "Croatia", "Korea": "South Korea", "Ukraine": "Ukraine",
     "Brazil": "Brazil", "Côte d'Ivoire": "Cote d'Ivoire", "Cote d'Ivoire": "Cote d'Ivoire",
     "Andorra": "Andorra", "Japan": "Japan", "Malta": "Malta", "Hungary": "Hungary",
     "Chile": "Chile", "Bulgaria": "Bulgaria", "Congo-Brazzaville": "Congo-Brazzaville",
@@ -36,7 +36,7 @@ const mapNameToJsonName: { [key: string]: string } = {
     "Tanzania": "Tanzania", "Serbia": "Serbia", "Brunei": "Brunei", "Eswatini": "Eswatini",
     "Kosovo": "Kosovo", "Angola": "Angola", "Mozambique": "Mozambique", "Mongolia": "Mongolia",
     "Guinea": "Guinea", "Maldives": "Maldives", "Burkina Faso": "Burkina Faso", "Zimbabwe": "Zimbabwe",
-    "Lesotho": "Lesotho", "Chad": "Chad", "South Sudan": "South Sudan", "Guinea-Bissau": "Guinea-Bissau",
+    "Lesotho": "Lesotho", "Chad": "Chad", "S. Sudan": "South Sudan", "Guinea-Bissau": "Guinea-Bissau",
     "Haiti": "Haiti", "Israel": "Israel", "Madagascar": "Madagascar", "Georgia": "Georgia",
     "Colombia": "Colombia", "Philippines": "Philippines", "Kenya": "Kenya", "Equatorial Guinea": "Equatorial Guinea",
     "Mali": "Mali", "Morocco": "Morocco", "W. Sahara": "Morocco", "Western Sahara": "Morocco",
@@ -55,8 +55,9 @@ const mapNameToJsonName: { [key: string]: string } = {
     "Cuba": "Cuba", "Belarus": "Belarus", "Azerbaijan": "Azerbaijan", "Djibouti": "Djibouti",
     "Myanmar": "Myanmar", "Egypt": "Egypt", "Russia": "Russia", "Nicaragua": "Nicaragua",
     "Vietnam": "Vietnam", "Turkmenistan": "Turkmenistan", "Afghanistan": "Afghanistan", "Iran": "Iran",
-    "Syria": "Syria", "China": "China", "North Korea": "North Korea", "Eritrea": "Eritrea",
-    "Greenland": "Denmark",
+    "Syria": "Syria", "China": "China", "Dem. Rep. Korea": "North Korea", "Eritrea": "Eritrea",
+    "Greenland": "Denmark", "Congo": "Congo-Brazzaville", "Central African Rep.": "Central African Republic","Lao PDR": "Laos","Czech Rep.": "Czechia"
+    
 };
 
 export default function DataChart() {
@@ -352,7 +353,7 @@ export default function DataChart() {
                                                 alignItems: 'center',
                                                 padding: '12px',
                                                 marginBottom: '8px',
-                                                borderRadius: '12px',
+                                                borderRadius: '0px',
                                                 backgroundColor: hoveredCountry?.Rank === country.Rank ? '#E8F5E9' : (index % 2 === 0 ? '#F1F8E9' : '#FFFFFF'),
                                                 borderLeft: `4px solid ${borderColor}`,
                                                 transition: 'all 0.2s',
