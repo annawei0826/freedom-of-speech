@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMounted, setIsMounted] = useState(false); // 新增:追蹤組件是否已掛載
 
   const menuItems = [
     { name: '引言', link: 'introduction' },
@@ -12,6 +13,11 @@ export default function Header() {
     { name: '數據', link: 'data' },
     { name: '延伸閱讀', link: 'sec6' }
   ];
+
+  // 新增:組件掛載後設置為 true
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,7 +47,7 @@ export default function Header() {
 
         <div
           id="NAV"
-          className={`nav-mobile ${isNavOpen ? 'reveal' : ''}`}
+          className={`nav-mobile ${isNavOpen ? 'reveal' : ''} ${isMounted ? 'mounted' : ''}`}
         >
           <nav>
             {menuItems.map((item, index) => (
@@ -86,19 +92,19 @@ export default function Header() {
           box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
         }
 
-        /* Logo - 左側，與邊緣保持 30px */
+        /* Logo - 左側,與邊緣保持 30px */
         .logo {
           width: 94px;
           margin-top: 20px;
           margin-bottom: 20px;
           margin-left: 30px;
           position: relative;
-          z-index: 51; /* Adjusted from 52 to 51 */
+          z-index: 51;
         }
 
-        /* NAV - 桌面版顯示在右側，與邊緣保持 30px */
+        /* NAV - 桌面版顯示在右側,與邊緣保持 30px */
         #NAV {
-          z-index: 52; /* Adjusted from 51 to 52 */
+          z-index: 52;
           height: 60px;
           box-sizing: border-box;
           transition: ease-in-out 0.3s;
@@ -216,7 +222,7 @@ export default function Header() {
             margin-left: 20px;
           }
 
-          /* 顯示漢堡按鈕，與邊緣保持 20px */
+          /* 顯示漢堡按鈕,與邊緣保持 20px */
           .NAV_btn_wrap {
             display: flex;
             align-items: center;
@@ -224,13 +230,13 @@ export default function Header() {
             width: 60px;
             height: 60px;
             margin-right: 20px;
-            z-index: 53; /* Adjusted from 52 to 53 */
+            z-index: 53;
           }
 
           /* NAV 變成全屏選單 */
           #NAV {
             position: fixed;
-            z-index: 52; /* Adjusted from 51 to 52 */
+            z-index: 52;
             width: 100%;
             height: 100%;
             box-sizing: border-box;
@@ -239,6 +245,13 @@ export default function Header() {
             background: #FDF4CC;
             left: 0px;
             top: -100%;
+            opacity: 0; /* 新增:初始完全透明 */
+          }
+
+          /* 組件掛載後才啟用過渡效果 */
+          #NAV.mounted {
+            opacity: 1;
+            transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out;
           }
 
           /* 選單打開時滑入 */
@@ -257,6 +270,10 @@ export default function Header() {
           }
           
           /* 選單打開時顯示 */
+          .nav-mobile.reveal {
+            visibility: visible;
+          }
+
           .nav-mobile.reveal nav {
             opacity: 1;
             pointer-events: auto;
