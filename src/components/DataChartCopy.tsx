@@ -5,7 +5,6 @@ import { useEffect, useRef, useState } from "react";
 import * as echarts from "echarts";
 import rsfData from "@/data/rsf-2025.json";
 
-// 完整的地圖名稱 -> JSON Country_EN 映射表
 const mapNameToJsonName: { [key: string]: string } = {
     "Norway": "Norway", "Estonia": "Estonia", "Netherlands": "Netherlands", "Sweden": "Sweden",
     "Finland": "Finland", "Denmark": "Denmark", "Ireland": "Ireland", "Portugal": "Portugal",
@@ -216,11 +215,11 @@ export default function DataChart() {
     }, []);
 
     const getScoreColor = (score: number) => {
-        if (score >= 85) return '#00a950';  // 良好 (85-100)
-        if (score >= 70) return '#ffcb05';  // 滿意 (70-85)
-        if (score >= 55) return '#f37736';  // 問題顯著 (55-70)
-        if (score >= 40) return '#d94e5d';  // 艱難 (40-55)
-        return '#8e1600';                   // 非常嚴重 (0-40)
+        if (score >= 85) return '#00a950';  
+        if (score >= 70) return '#ffcb05';  
+        if (score >= 55) return '#f37736';  
+        if (score >= 40) return '#d94e5d';  
+        return '#8e1600';                   
     };
 
     return (
