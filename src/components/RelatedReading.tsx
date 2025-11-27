@@ -1,3 +1,4 @@
+// RelatedReading.tsx
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -38,26 +39,41 @@ export default function RelatedReading() {
                 margin: '0 auto',
                 padding: '60px 20px 100px 20px'
             }}>
-                {/* Title Section */}
+                {/* 標題區塊 */}
                 <div style={{
-                    textAlign: 'center',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '20px',
                     marginBottom: '60px'
                 }}>
-                    <h2 style={{
-                        fontSize: '48px',
-                        fontWeight: 'bold',
-                        color: '#554B3D',
-                        margin: '0 0 16px 0'
-                    }}>
-                        延伸閱讀
-                    </h2>
-                    <p style={{
-                        fontSize: '18px',
-                        color: '#66BB6A',
-                        margin: '0'
-                    }}>
-                        深入報導與分析
-                    </p>
+                    {/* 左側線條 */}
+                    <div style={{
+                        width: '6px',
+                        height: '80px',
+                        background: 'linear-gradient(to bottom, #66BB6A, #2E7D32)',
+                        borderRadius: '3px'
+                    }}></div>
+
+                    {/* 標題文字 */}
+                    <div>
+                        <h2 style={{
+                            fontSize: '48px',
+                            fontWeight: 'bold',
+                            color: '#554B3D',
+                            margin: '0 0 8px 0',
+                            lineHeight: '1.2'
+                        }}>
+                            延伸閱讀
+                        </h2>
+                        <p style={{
+                            fontSize: '18px',
+                            color: '#66BB6A',
+                            margin: '0',
+                            fontWeight: '500'
+                        }}>
+                            Further Reading
+                        </p>
+                    </div>
                 </div>
 
                 {loading ? (

@@ -66,49 +66,37 @@ export default function ArticleSlider({ articles = articlesData }: ArticleSlider
             }
         `;
         document.head.appendChild(style);
-        
+
         return () => {
             document.head.removeChild(style);
         };
     }, []);
 
     return (
-        <section 
-    id="articles"
-    style={{
-        position: 'relative',
-        width: '100%',
-        overflow: 'hidden',
-        backgroundImage: 'url("/asbg.jpg")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',  // ★ 讓背景定住
-    }}
->
-    {/* 背景遮罩 */}
-    <div
-        style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            background: 'linear-gradient(135deg, rgba(27, 94, 32, 0.85), rgba(46, 125, 50, 0.1))',
-            zIndex: 0,
-        }}
-    />
-
-    {/* 內容區域 */}
-    <div
-        style={{
-            position: 'relative',
-            zIndex: 1,
-            maxWidth: '1400px',
-            margin: '0 auto',
-            padding: '100px 24px 120px',
-        }}
-    >
-            </div>
+        <section
+            id="articles"
+            style={{
+                position: 'relative',
+                width: '100%',
+                overflow: 'hidden',
+                backgroundImage: 'url("/asbg.jpg")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundAttachment: 'fixed',
+            }}
+        >
+            {/* 背景遮罩 */}
+            <div
+                style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    background: 'linear-gradient(135deg, rgba(27, 94, 32, 0.85), rgba(46, 125, 50, 0.1))',
+                    zIndex: 0,
+                }}
+            />
 
             {/* 內容區域 */}
             <div style={{
@@ -120,26 +108,41 @@ export default function ArticleSlider({ articles = articlesData }: ArticleSlider
             }}>
                 {/* 標題區塊 */}
                 <div style={{
-                    textAlign: 'center',
-                    marginBottom: '70px'
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '20px',
+                    marginBottom: '60px'
                 }}>
-                    <h2 style={{
-                        fontSize: '52px',
-                        fontWeight: 'bold',
-                        color: '#FFFFFF',
-                        marginBottom: '24px',
-                        textShadow: '0 4px 12px rgba(0,0,0,0.3)',
-                        letterSpacing: '2px'
-                    }}>
-                        文章精選
-                    </h2>
+                    {/* 左側線條 */}
                     <div style={{
-                        width: '120px',
-                        height: '5px',
-                        background: 'linear-gradient(to right, #FDD835, #FFB300)',
-                        margin: '0 auto',
-                        boxShadow: '0 2px 8px rgba(253, 216, 53, 0.5)'
+                        width: '6px',
+                        height: '80px',
+                        background: 'linear-gradient(to bottom, #FDD835, #FFB300)',
+                        borderRadius: '3px',
+                        boxShadow: '0 2px 8px rgba(253, 216, 53, 0.4)'
                     }}></div>
+
+                    {/* 標題文字 */}
+                    <div>
+                        <h2 style={{
+                            fontSize: '48px',
+                            fontWeight: 'bold',
+                            color: '#FFFFFF',
+                            margin: '0 0 8px 0',
+                            lineHeight: '1.2',
+                            textShadow: '0 4px 12px rgba(0,0,0,0.3)'
+                        }}>
+                            文章精選
+                        </h2>
+                        <p style={{
+                            fontSize: '18px',
+                            color: '#FDD835',
+                            margin: '0',
+                            fontWeight: '500'
+                        }}>
+                            Featured Articles
+                        </p>
+                    </div>
                 </div>
 
                 {/* Swiper 容器 */}
@@ -170,7 +173,7 @@ export default function ArticleSlider({ articles = articlesData }: ArticleSlider
                     >
                         {articles.map((article) => (
                             <SwiperSlide key={article.id}>
-                                <div 
+                                <div
                                     style={{
                                         backgroundColor: '#FFFFFF',
                                         borderRadius: '20px',
@@ -223,16 +226,16 @@ export default function ArticleSlider({ articles = articlesData }: ArticleSlider
                                                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
                                             </svg>
                                             <span>
-                                                {new Date(article.date).toLocaleDateString('zh-TW', { 
-                                                    month: 'long', 
-                                                    day: 'numeric' 
+                                                {new Date(article.date).toLocaleDateString('zh-TW', {
+                                                    month: 'long',
+                                                    day: 'numeric'
                                                 })}
                                             </span>
                                         </div>
                                     </div>
 
                                     {/* 內容區域 */}
-                                    <div style={{ 
+                                    <div style={{
                                         padding: '24px',
                                         flex: 1,
                                         display: 'flex',

@@ -3,34 +3,60 @@
 
 import { useEffect, useRef, useState } from "react";
 import * as echarts from "echarts";
-
-// 模擬數據 - 只包含指定的10個國家
-const rsfData = [
-    { Rank: 25, Country_ZH: "臺灣", Country_EN: "Taiwan", "Score 2025": "75.32", Political: "85.2", Economic: "78.4", Legal: "72.1", Social: "68.9", Security: "71.8", RankChange: 2 },
-    { Rank: 22, Country_ZH: "南韓", Country_EN: "South Korea", "Score 2025": "76.84", Political: "82.3", Economic: "75.6", Legal: "78.2", Social: "73.1", Security: "74.9", RankChange: -3 },
-    { Rank: 21, Country_ZH: "英國", Country_EN: "United Kingdom", "Score 2025": "77.15", Political: "88.4", Economic: "79.2", Legal: "76.8", Social: "72.5", Security: "68.9", RankChange: 0 },
-    { Rank: 26, Country_ZH: "日本", Country_EN: "Japan", "Score 2025": "74.98", Political: "81.7", Economic: "72.3", Legal: "75.4", Social: "69.8", Security: "75.8", RankChange: 4 },
-    { Rank: 56, Country_ZH: "美國", Country_EN: "United States", "Score 2025": "62.45", Political: "75.2", Economic: "68.9", Legal: "62.1", Social: "55.3", Security: "50.8", RankChange: -1 },
-    { Rank: 115, Country_ZH: "菲律賓", Country_EN: "Philippines", "Score 2025": "42.36", Political: "48.5", Economic: "45.2", Legal: "40.8", Social: "38.7", Security: "38.6", RankChange: -5 },
-    { Rank: 174, Country_ZH: "越南", Country_EN: "Vietnam", "Score 2025": "18.25", Political: "15.2", Economic: "22.3", Legal: "18.9", Social: "16.4", Security: "18.5", RankChange: 1 },
-    { Rank: 162, Country_ZH: "俄國", Country_EN: "Russia", "Score 2025": "24.17", Political: "18.5", Economic: "28.4", Legal: "25.2", Social: "22.9", Security: "25.9", RankChange: -3 },
-    { Rank: 179, Country_ZH: "中國大陸", Country_EN: "China", "Score 2025": "12.84", Political: "8.5", Economic: "15.2", Legal: "12.9", Social: "14.6", Security: "13.0", RankChange: 0 },
-    { Rank: 180, Country_ZH: "北韓", Country_EN: "North Korea", "Score 2025": "8.56", Political: "5.2", Economic: "8.9", Legal: "9.2", Social: "10.5", Security: "9.1", RankChange: 0 }
-];
+import rsfData from "@/data/rsf-2025.json";
 
 // 完整的地圖名稱 -> JSON Country_EN 映射表
 const mapNameToJsonName: { [key: string]: string } = {
-    "Taiwan": "Taiwan",
-    "South Korea": "South Korea",
-    "United Kingdom": "United Kingdom",
-    "Japan": "Japan",
-    "United States": "United States",
-    "United States of America": "United States",
-    "Philippines": "Philippines",
-    "Vietnam": "Vietnam",
-    "Russia": "Russia",
-    "China": "China",
-    "North Korea": "North Korea"
+    "Norway": "Norway", "Estonia": "Estonia", "Netherlands": "Netherlands", "Sweden": "Sweden",
+    "Finland": "Finland", "Denmark": "Denmark", "Ireland": "Ireland", "Portugal": "Portugal",
+    "Switzerland": "Switzerland", "Czechia": "Czechia", "Germany": "Germany", "Liechtenstein": "Liechtenstein",
+    "Luxembourg": "Luxembourg", "Lithuania": "Lithuania", "Latvia": "Latvia", "New Zealand": "New Zealand",
+    "Iceland": "Iceland", "Belgium": "Belgium", "Trinidad and Tobago": "Trinidad and Tobago",
+    "United Kingdom": "United Kingdom", "Canada": "Canada", "Austria": "Austria", "Spain": "Spain",
+    "Taiwan": "Taiwan", "France": "France", "Jamaica": "Jamaica", "South Africa": "South Africa",
+    "Namibia": "Namibia", "Australia": "Australia", "Cabo Verde": "Cabo Verde", "Poland": "Poland",
+    "Suriname": "Suriname", "Slovenia": "Slovenia", "Armenia": "Armenia", "Moldova": "Moldova",
+    "Costa Rica": "Costa Rica", "Montenegro": "Montenegro", "Slovakia": "Slovakia", "East Timor": "East Timor",
+    "Fiji": "Fiji", "Gabon": "Gabon", "North Macedonia": "North Macedonia", "Dominican Republic": "Dominican Republic",
+    "Samoa": "Samoa", "Seychelles": "Seychelles", "Tonga": "Tonga", "Belize": "Belize",
+    "Italy": "Italy", "Mauritania": "Mauritania", "Mauritius": "Mauritius", "Ghana": "Ghana",
+    "Panama": "Panama", "Liberia": "Liberia", "Romania": "Romania", "Sierra Leone": "Sierra Leone",
+    "United States": "United States", "United States of America": "United States", "Gambia": "Gambia",
+    "Uruguay": "Uruguay", "Croatia": "Croatia", "South Korea": "South Korea", "Ukraine": "Ukraine",
+    "Brazil": "Brazil", "Côte d'Ivoire": "Cote d'Ivoire", "Cote d'Ivoire": "Cote d'Ivoire",
+    "Andorra": "Andorra", "Japan": "Japan", "Malta": "Malta", "Hungary": "Hungary",
+    "Chile": "Chile", "Bulgaria": "Bulgaria", "Congo-Brazzaville": "Congo-Brazzaville",
+    "Republic of the Congo": "Congo-Brazzaville", "Central African Republic": "Central African Republic",
+    "Guyana": "Guyana", "Senegal": "Senegal", "Comoros": "Comoros", "Malawi": "Malawi",
+    "Cyprus": "Cyprus", "Papua New Guinea": "Papua New Guinea", "Qatar": "Qatar", "Albania": "Albania",
+    "Botswana": "Botswana", "Zambia": "Zambia", "Niger": "Niger", "Paraguay": "Paraguay",
+    "Thailand": "Thailand", "Bosnia-Herzegovina": "Bosnia-Herzegovina", "Bosnia and Herz.": "Bosnia-Herzegovina",
+    "Argentina": "Argentina", "Malaysia": "Malaysia", "Greece": "Greece", "Nepal": "Nepal",
+    "Northern Cyprus": "Northern Cyprus", "Benin": "Benin", "Bolivia": "Bolivia", "Ecuador": "Ecuador",
+    "Tanzania": "Tanzania", "Serbia": "Serbia", "Brunei": "Brunei", "Eswatini": "Eswatini",
+    "Kosovo": "Kosovo", "Angola": "Angola", "Mozambique": "Mozambique", "Mongolia": "Mongolia",
+    "Guinea": "Guinea", "Maldives": "Maldives", "Burkina Faso": "Burkina Faso", "Zimbabwe": "Zimbabwe",
+    "Lesotho": "Lesotho", "Chad": "Chad", "South Sudan": "South Sudan", "Guinea-Bissau": "Guinea-Bissau",
+    "Haiti": "Haiti", "Israel": "Israel", "Madagascar": "Madagascar", "Georgia": "Georgia",
+    "Colombia": "Colombia", "Philippines": "Philippines", "Kenya": "Kenya", "Equatorial Guinea": "Equatorial Guinea",
+    "Mali": "Mali", "Morocco": "Morocco", "W. Sahara": "Morocco", "Western Sahara": "Morocco",
+    "Togo": "Togo", "Nigeria": "Nigeria", "Singapore": "Singapore", "Mexico": "Mexico",
+    "Burundi": "Burundi", "Algeria": "Algeria", "Indonesia": "Indonesia", "Kuwait": "Kuwait",
+    "Tunisia": "Tunisia", "Peru": "Peru", "Cameroon": "Cameroon", "Lebanon": "Lebanon",
+    "Democratic Republic of the Congo": "Democratic Republic of the Congo", "Dem. Rep. Congo": "Democratic Republic of the Congo",
+    "Oman": "Oman", "El Salvador": "El Salvador", "Somalia": "Somalia", "Libya": "Libya",
+    "Guatemala": "Guatemala", "Sri Lanka": "Sri Lanka", "Hong Kong": "Hong Kong", "Kazakhstan": "Kazakhstan",
+    "Honduras": "Honduras", "Uganda": "Uganda", "Kyrgyzstan": "Kyrgyzstan", "Ethiopia": "Ethiopia",
+    "Rwanda": "Rwanda", "Jordan": "Jordan", "Uzbekistan": "Uzbekistan", "Bangladesh": "Bangladesh",
+    "Laos": "Laos", "India": "India", "Bhutan": "Bhutan", "Tajikistan": "Tajikistan",
+    "Yemen": "Yemen", "Iraq": "Iraq", "Sudan": "Sudan", "Bahrain": "Bahrain",
+    "Pakistan": "Pakistan", "Turkey": "Turkey", "Venezuela": "Venezuela", "Cambodia": "Cambodia",
+    "Saudi Arabia": "Saudi Arabia", "Palestine": "Palestine", "United Arab Emirates": "United Arab Emirates",
+    "Cuba": "Cuba", "Belarus": "Belarus", "Azerbaijan": "Azerbaijan", "Djibouti": "Djibouti",
+    "Myanmar": "Myanmar", "Egypt": "Egypt", "Russia": "Russia", "Nicaragua": "Nicaragua",
+    "Vietnam": "Vietnam", "Turkmenistan": "Turkmenistan", "Afghanistan": "Afghanistan", "Iran": "Iran",
+    "Syria": "Syria", "China": "China", "North Korea": "North Korea", "Eritrea": "Eritrea",
+    "Greenland": "Denmark",
 };
 
 export default function DataChart() {
@@ -40,15 +66,15 @@ export default function DataChart() {
     const [hoveredCountry, setHoveredCountry] = useState<any | null>(null);
     const [isCollapsed, setIsCollapsed] = useState(true);
 
-    // 初始化 - 只顯示指定的10個國家
+    // 初始化
     useEffect(() => {
-        setFilteredCountries(rsfData);
+        setFilteredCountries(rsfData); // 顯示所有 180 個國家
     }, []);
 
     // 搜尋過濾邏輯
     useEffect(() => {
         if (searchQuery.trim() === "") {
-            setFilteredCountries(rsfData);
+            setFilteredCountries(rsfData); // 顯示所有國家
         } else {
             const filtered = rsfData.filter(item =>
                 item.Country_ZH.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -71,20 +97,7 @@ export default function DataChart() {
             try {
                 const mapResponse = await fetch('https://raw.githubusercontent.com/apache/echarts/master/test/data/map/json/world.json');
                 const mapJson = await mapResponse.json();
-
-                // 建立我們要保留的國家集合
-                const keepCountries = new Set(Object.keys(mapNameToJsonName));
-
-                // 過濾地圖 JSON,只保留指定的國家
-                const filteredMapJson = {
-                    ...mapJson,
-                    features: mapJson.features.filter((feature: any) => {
-                        const mapName = feature.properties?.name;
-                        return mapName && keepCountries.has(mapName);
-                    })
-                };
-
-                echarts.registerMap('world', filteredMapJson);
+                echarts.registerMap('world', mapJson);
                 chart.hideLoading();
 
                 const dataMap = new Map();
@@ -94,18 +107,12 @@ export default function DataChart() {
                         rank: item.Rank,
                         nameZH: item.Country_ZH,
                         Country_EN: item.Country_EN,
-                        Political: item.Political,
-                        Economic: item.Economic,
-                        Legal: item.Legal,
-                        Social: item.Social,
-                        Security: item.Security,
-                        RankChange: item.RankChange
                     });
                 });
 
                 const mapData: any[] = [];
-                if (filteredMapJson.features) {
-                    filteredMapJson.features.forEach((feature: any) => {
+                if (mapJson.features) {
+                    mapJson.features.forEach((feature: any) => {
                         const mapName = feature.properties?.name;
                         if (mapName && mapNameToJsonName[mapName]) {
                             const jsonName = mapNameToJsonName[mapName];
@@ -156,6 +163,9 @@ export default function DataChart() {
                         calculable: true,
                         inRange: {
                             color: ['#d94e5d', '#e8905a', '#f2c55c', '#f5e89a', '#c8d89f', '#94c4a4', '#5ba3a8']
+                        },
+                        outOfRange: {
+                            color: '#e0e0e0'
                         }
                     },
                     series: [{
@@ -164,9 +174,9 @@ export default function DataChart() {
                         map: 'world',
                         roam: true,
                         itemStyle: {
-                            areaColor: '#94c4a4',
+                            areaColor: '#e0e0e0',
                             borderColor: '#fff',
-                            borderWidth: 1
+                            borderWidth: 0.5
                         },
                         emphasis: {
                             itemStyle: {
@@ -234,7 +244,7 @@ export default function DataChart() {
                         background: 'linear-gradient(to bottom, #66BB6A, #2E7D32)',
                         borderRadius: '3px'
                     }}></div>
-                    
+
                     {/* 標題文字 */}
                     <div>
                         <h2 style={{
@@ -252,7 +262,7 @@ export default function DataChart() {
                             margin: '0',
                             fontWeight: '500'
                         }}>
-                            Press Freedom Index 2025 - 10 Key Countries
+                            Press Freedom Index 2025
                         </p>
                     </div>
                 </div>
@@ -318,7 +328,7 @@ export default function DataChart() {
                             fontSize: '12px',
                             color: '#999'
                         }}>
-                            <span>排名</span>
+                            <span>2025 年的指數</span>
                             <span>總分</span>
                         </div>
 
@@ -404,11 +414,8 @@ export default function DataChart() {
                             zIndex: 11,
                             minWidth: '200px'
                         }}>
-                            <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#1B5E20', marginBottom: '12px' }}>
-                                {hoveredCountry.Country_ZH}
-                            </div>
                             <div style={{ fontSize: '12px', color: '#999', marginBottom: '8px' }}>
-                                全球排名
+                                指數總分
                             </div>
                             <div style={{
                                 fontSize: '32px',
@@ -454,7 +461,7 @@ export default function DataChart() {
                                         fontSize: '13px',
                                         color: hoveredCountry.RankChange > 0 ? '#2E7D32' : hoveredCountry.RankChange < 0 ? '#d32f2f' : '#666'
                                     }}>
-                                        <span style={{ marginRight: '8px' }}>2024年排名變化</span>
+                                        <span style={{ marginRight: '8px' }}>相較2024年排名變化</span>
                                         <span style={{ fontWeight: 'bold' }}>
                                             {hoveredCountry.RankChange > 0 ? `↑ ${hoveredCountry.RankChange}` :
                                                 hoveredCountry.RankChange < 0 ? `↓ ${Math.abs(hoveredCountry.RankChange)}` : '—'}
@@ -531,7 +538,7 @@ export default function DataChart() {
                             fontSize: '11px',
                             color: '#999'
                         }}>
-                            <span>排名</span>
+                            <span>2025 年的指數</span>
                             <span>總分</span>
                         </div>
 

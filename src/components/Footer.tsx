@@ -11,7 +11,7 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="py-8">
+        <footer className="py-[40px] bg-gradient-to-r from-[#A4D65E] to-[#66BB6A]">
             <div className="max-w-7xl mx-auto px-5 py-8">
                 <div className="flex flex-wrap justify-center items-center text-center text-white text-sm leading-relaxed gap-x-4 gap-y-2">
                     {footerItems.map((item, index) => (
@@ -21,13 +21,6 @@ export default function Footer() {
                     ))}
                 </div>
             </div>
-
-            <style jsx>{`
-                footer {
-                  background: linear-gradient(to right, #A4D65E 0%, #66BB6A 100%);
-                  padding: 40px 0;
-                }
-            `}</style>
         </footer>
     );
 }

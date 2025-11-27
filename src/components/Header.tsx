@@ -10,7 +10,7 @@ export default function Header() {
     { name: '引言', link: 'introduction' },
     { name: '文章', link: 'articles' },
     { name: '數據', link: 'data' },
-    { name: '延伸閱讀', link: 'reading' }
+    { name: '延伸閱讀', link: 'sec6' }
   ];
 
   useEffect(() => {
@@ -33,14 +33,14 @@ export default function Header() {
 
   return (
     <>
-      <header 
-        id="HEADER" 
+      <header
+        id="HEADER"
         className={isScrolled ? 'reveal' : ''}
       >
         <img src="/logo.png" className="logo" alt="Logo" />
-        
-        <div 
-          id="NAV" 
+
+        <div
+          id="NAV"
           className={`nav-mobile ${isNavOpen ? 'reveal' : ''}`}
         >
           <nav>
@@ -55,7 +55,7 @@ export default function Header() {
             ))}
           </nav>
         </div>
-        
+
         <div className="NAV_btn_wrap" onClick={() => setIsNavOpen(!isNavOpen)}>
           <div id="nav-icon3" className={`light ${isNavOpen ? 'open' : ''}`}>
             <span></span>
@@ -93,12 +93,12 @@ export default function Header() {
           margin-bottom: 20px;
           margin-left: 30px;
           position: relative;
-          z-index: 52;
+          z-index: 51; /* Adjusted from 52 to 51 */
         }
 
         /* NAV - 桌面版顯示在右側，與邊緣保持 30px */
         #NAV {
-          z-index: 51;
+          z-index: 52; /* Adjusted from 51 to 52 */
           height: 60px;
           box-sizing: border-box;
           transition: ease-in-out 0.3s;
@@ -224,13 +224,13 @@ export default function Header() {
             width: 60px;
             height: 60px;
             margin-right: 20px;
-            z-index: 52;
+            z-index: 53; /* Adjusted from 52 to 53 */
           }
 
           /* NAV 變成全屏選單 */
           #NAV {
             position: fixed;
-            z-index: 51;
+            z-index: 52; /* Adjusted from 51 to 52 */
             width: 100%;
             height: 100%;
             box-sizing: border-box;
